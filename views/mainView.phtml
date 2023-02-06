@@ -1,0 +1,297 @@
+<!--https://pixel-template.blogspot.com-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IES Hispanidad</title>
+    <script src="https://kit.fontawesome.com/61702239e8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="views/css/style.css">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+          media="screen">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function () {
+
+                $(this).addClass('transition');
+            }, function () {
+
+                $(this).removeClass('transition');
+            });
+
+            document.onclick = hideMenu;
+            document.querySelector('#logo').oncontextmenu = rightClick;
+
+        });
+
+
+
+        function hideMenu() {
+            document.getElementById("contextMenu")
+                .style.display = "none"
+        }
+
+        function rightClick(e) {
+            e.preventDefault();
+
+            if (document.getElementById("contextMenu") .style.display == "block"){
+                hideMenu();
+            }else{
+                var menu = document.getElementById("contextMenu")
+                menu.style.display = 'block';
+                menu.style.left = e.pageX + "px";
+                menu.style.top = e.pageY + "px";
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+<nav class="navbar">
+    <div id="logo" class="nav-left col-xs-12 col-sm-12 col-md-1 text-center mr-1">
+        <a class="navbar-brand px-2 py-0" href="">
+            <img src="views/img/logos/logo.png" style="height: 57px; width: 125px; line-height: 55px;" alt="">
+        </a>
+    </div>
+
+    <div id="contextMenu" class="context-menu" style="display: none">
+        <ul class="menu">
+            <li class="share"><a href="#"><i class="fa fa-cog" aria-hidden="true"></i>Administracion</a></li>
+        </ul>
+    </div>
+
+    <div class="nav-center d-flex mx-auto pl-sm-5 pl-md-5 pl-lg-5">
+
+        <a class="navbar-brand px-0 py-0 m-0 pr-3 text-light" href="?proyectos">
+            Proyectos
+        </a>
+
+        <div class="dropdown" style="cursor: pointer">
+            <a class="navbar-brand px-2 py-0 text-light dropdown-toggle mr-0" id="centrosMenu" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
+                Centro
+            </a>
+            <div class="dropdown-menu" aria-labelledby="centrosMenu">
+                <a class="dropdown-item" href="index.php?calendario">Calendario</a>
+                <a class="dropdown-item" href="index.php?cursos">Cursos</a>
+                <a class="dropdown-item" href="index.php?tutores">Tutores</a>
+                <a class="dropdown-item" href="index.php?departamentos">Departamentos</a>
+                <a class="dropdown-item" href="index.php?reglamento">Plan De Centro</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="nav-right d-flex col-xs-12 col-sm-12 col-md-icons">
+        <div class="text-center mx-auto">
+            <a class="navbar-brand p-0 mx-1 ml-2" href="https://es-es.facebook.com/ieshispanidad/">
+                <img src="views/img/fontawesome/facebook.svg" height="30px" alt="">
+            </a>
+            <a class="navbar-brand p-0 mx-1" href="https://twitter.com/ies_hispanidad">
+                <img src="views/img/fontawesome/twitter.svg" height="30px" alt="">
+            </a>
+            <a class="navbar-brand p-0 mx-1" href="https://www.instagram.com/ieshispanidad/">
+                <img src="views/img/fontawesome/instagram.svg" height="30px" alt="">
+            </a>
+        </div>
+
+    </div>
+</nav>
+<header id="header">
+    <div class="avada-row py-5">
+        <div class="logo w-auto">
+            <img src="views/img/logos/logo.png" style="width: 35% !important;" alt="IES Hispanidad">
+        </div>
+    </div>
+</header>
+<div class="slidebg py-3 text-center row m-0">
+    <div class="col-xl-3 col-md-6">
+        <a href="https://educacionadistancia.juntadeandalucia.es/centros/granada/"><img
+                    src="views/img/logos/moodlecentros.png" height="100px" alt="Moodle"></a>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <a href="https://seneca.juntadeandalucia.es/seneca/jsp/portalpasen/"><img src="views/img/logos/ipasen.png"
+                                                                                  height="100px" alt="iPasen"></a>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <a href="https://fpempresa.net/"><img src="views/img/logos/fpempresa.png" height="100px"
+                                                                 width="98%" alt="EmpleaFP"></a>
+    </div>
+    <div class="col-xl-3 col-md-6">
+        <a href="https://seneca.juntadeandalucia.es/seneca/jsp/portal/"><img src="views/img/logos/seneca.png"
+                                                                             height="100px" alt="Seneca"></a>
+    </div>
+</div>
+
+<div class="row m-0 mt-3">
+    <div class="main-left adjust-main-left text-right ml-auto">
+        <div class="d-flex px-2">
+            <h5 class="text-left mr-auto">Novedades</h5>
+            <h5 class="text-right">Ver Todo</h5>
+        </div>
+        <hr class="separator mb-5">
+
+        <div class="row m-0 justify-content-center text-center">
+
+            <div class="col-sm-6 col-md-4 thumb">
+                <a href="index.php?calendario"
+                   class="fancybox" rel="ligthbox">
+                    <img src="views/img/noticias/calendario.png"
+                         class="zoom img-fluid" alt=""><br>
+                    <span class="img-title texto"><h5>Calendario 22/23</h5></span>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-4 thumb">
+                <a href="index.php?cursos"
+                   class="fancybox" rel="ligthbox">
+                    <img src="views/img/noticias/cursos.png"
+                         class="zoom img-fluid" alt=""><br>
+                    <span class="img-title texto"><h5>Cursos</h5></span>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-4 thumb">
+                <a href="index.php?fp-hispanidad"
+                   class="fancybox" rel="ligthbox">
+                    <img src="views/img/noticias/formacion-profesional.png"
+                         class="zoom img-fluid" alt=""><br>
+                    <span class="img-title texto"><h5>FP Hispanidad</h5></span>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-4 thumb">
+                <a href="https://revistaelhispano.blogspot.com/"
+                   class="fancybox" rel="ligthbox">
+                    <img src="views/img/noticias/blog.png"
+                         class="zoom img-fluid" alt=""><br>
+                    <span class="img-title texto"><h5>Blog Hispanidad</h5></span>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-4 thumb">
+                <a href="index.php?tutores"
+                   class="fancybox" rel="ligthbox">
+                    <img src="views/img/noticias/tutores.png"
+                         class="zoom img-fluid" alt=""><br>
+                    <span class="img-title texto"><h5>Tutores</h5></span>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-md-4 thumb">
+                <a href="index.php?reglamento"
+                   class="fancybox" rel="ligthbox">
+                    <img src="views/img/noticias/reglamento.png"
+                         class="zoom img-fluid" alt=""><br>
+                    <span class="img-title texto"><h5>Plan De Centro</h5></span>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="main-right adjust-main-right mr-auto">
+        <h5 class="text-center">Novedades Destacadas</h5>
+        <hr class="separator mb-5">
+        <div class="text-center mb-2 pt-2">
+
+            <a href="https://sites.google.com/view/erasmusieshispanidad/inicio"><img src="views/img/logos/erasmus.png" style="width: 60%;" class="mb-5 logo-erasmus"></a><br>
+
+            <iframe id="video" src="https://www.youtube.com/embed/3s1i9Rk2Kpc"
+                    title="ERASMUS+: El futuro del Programa" frameborder="0"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="mx-auto" style="width: 89% !important;">
+    <hr class="separator">
+    <div class="px-5 row">
+        <div class="col-sm-12 col-md-7 mt-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1959.6476621438528!2d-3.7121249301604244!3d37.18947405323313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71ff6cb66b1777%3A0x4d59cfb911a5584f!2sIES+Hispanidad!5e0!3m2!1sen!2ses!4v1542202540224"
+                    style="border:0" allowfullscreen="" width="100%" height="400px" frameborder="0"></iframe>
+        </div>
+        <div class="col-sm-12 col-md-5 mt-4 text-center row">
+            <h1 class="col-12 m-0">
+                Datos de contacto
+            </h1>
+            <p class="col-12">Nuestro centro se encuentra situado en el municipio de Santa Fe en Granada.</p>
+
+            <div class="col-12 my-2 d-flex">
+                <div class="row w-100">
+                    <img class="align-middle col-2 ml-auto p-0" src="views/img/fontawesome/clock.svg" height="58px">
+                    <div class="text-left col-9 mr-auto">
+                        <h3 class="m-0">Horario de secretaría</h3>
+                        <span class="m-0 texto">Lunes a Viernes de 9.30 a 13.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 my-2 d-flex">
+                <div class="row w-100">
+                    <img class="align-middle col-2 ml-auto p-0" src="views/img/fontawesome/phone-office.svg"
+                         height="58px">
+                    <div class="text-left col-9 mr-auto">
+                        <h3 class="m-0">Telefono de atención</h3>
+                        <span class="m-0 texto">671 533 270</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 my-2 d-flex">
+                <div class="row w-100">
+                    <img class="align-middle col-2 ml-auto p-0" src="views/img/fontawesome/map-location-dot.svg"
+                         height="58px">
+                    <div class="text-left col-9 mr-auto">
+                        <h3 class="m-0">Ubicación</h3>
+                        <span class="ml-0 texto">Calle Celestino Mutis 1 – 18320. Granada.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 my-2 d-flex">
+                <div class="row w-100">
+                    <img class="align-middle col-2 ml-auto p-0" src="views/img/fontawesome/envelope-open-text.svg"
+                         height="58px">
+                    <div class="text-left col-9 mr-auto">
+                        <h3 class="m-0">Correo Electronico</h3>
+                        <span class="ml-0 texto">18009444.edu@juntadeandalucia.es</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer row p-2 mt-2">
+    <div class="col-sm-12 col-md-6 d-flex">
+        <img class="mx-auto foto-footer" src="views/img/logos/logo_ministerio.png" width="600px">
+    </div>
+    <!-- Copyright -->
+    <div class="col-sm-12 col-md-6 d-flex">
+        <div class="m-auto">
+            © 2022 Copyright: <strong>I.E.S Hispanidad</strong>
+        </div>
+    </div>
+    <!-- Copyright -->
+</footer>
+</body>
+</html>

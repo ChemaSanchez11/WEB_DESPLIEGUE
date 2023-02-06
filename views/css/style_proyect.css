@@ -1,0 +1,196 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin-block: 2rem;
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1em;
+    background: #ece9e6;
+    background: linear-gradient(to right, #ffffff, #ece9e6);
+}
+
+.card__body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.tag {
+    align-self: flex-start;
+    padding: 0.25em 0.75em;
+    border-radius: 1em;
+    font-size: 0.75rem;
+}
+
+.tag + .tag {
+    margin-left: 0.5em;
+}
+
+.tag-blue {
+    background: #56ccf2;
+    background: linear-gradient(to bottom, #2f80ed, #56ccf2);
+    color: #fafafa;
+}
+
+.tag-brown {
+    background: #d1913c;
+    background: linear-gradient(to bottom, #ffd194, #d1913c);
+    color: #fafafa;
+}
+
+.tag-red {
+    background: #cb2d3e;
+    background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+    color: #fafafa;
+}
+
+.card__body h4 {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300|Raleway:100,500);
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 75px 10px;
+    clear: both;
+}
+
+.content .post {
+    border-left: 5px solid #308fd9;
+    padding: 0 15px;
+    margin-bottom: 50px;
+}
+
+.content .post:last-child {
+    margin-bottom: 0;
+}
+
+.content .post h2 {
+    color: #4F4F4F;
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5em;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.content .post h4 {
+    color: #4F4F4F;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.5em;
+    font-weight: 500;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.content .post p {
+    font-family: "Lato", sans-serif;
+    font-size: 1.5em;
+    padding-top: 10px;
+    word-spacing: 0.2em;
+    line-height: 1.2em;
+    color: #666;
+    margin: 0;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    padding: 0.2em;
+    border: 0.2em solid rgba(52, 73, 94, 0.2);
+    margin: 10px 0;
+    width: auto !important;
+}
+
+.content .papers {
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.content .papers .paper {
+    display: inline;
+    margin: 0 auto;
+    padding: 0.6em;
+    position: relative;
+}
+
+.content .papers img {
+    opacity: 0.5;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.content .papers img:hover {
+    opacity: 1;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.card__header {
+    height: 270px; /* Can be anything */
+    width: 350px; /* Can be anything */
+    position: relative;
+    background-color: white;
+}
+
+.card__header img {
+    max-height: 100%;
+    max-width: 100%;
+    width: 350px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto 0px;
+}
+
+.post img {
+    width: 100%;
+    display: block;
+    max-width: 352px;
+    max-height: 270px;
+}
